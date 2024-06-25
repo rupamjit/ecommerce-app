@@ -2,6 +2,7 @@ import express from "express";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
 import userRoutes from "./routes/userRoutes.js"
+categoryRoutes
 import connectDB from "./config/db.js";
 
 const app = express();
@@ -14,7 +15,7 @@ const port = process.env.PORT || 5000
 
 // routes
 app.use('/api/v1/users', userRoutes)
-
+app.use("/api/v1/category", categoryRoutes);
 
 connectDB()
 app.listen(port,()=>{
