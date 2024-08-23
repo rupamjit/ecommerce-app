@@ -103,7 +103,7 @@ function calcPrices(orderItems) {
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
-  };
+  };  
   
   const calculateTotalSales = async (req, res) => {
     try {
